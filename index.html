@@ -45,6 +45,56 @@
       <p>Son évaluation à travers des outils comme Lighthouse, Ecoindex, GreenIT et WAVE a permis d’identifier à la fois les forces (navigation claire, lazy loading, responsive design) et les pistes d’amélioration (poids des ressources, structure sémantique, accessibilité renforcée).</p>
     </section>
 
+    <section id="lighthouse">
+        <h2>Résultat de l'audit Lighthouse</h2>
+        <figure>
+          <img src="assets/images/lighthouse.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
+          <figcaption>Audit Lighthouse du site Île-de-France Mobilités</figcaption>
+        </figure>
+        <p>Scores PageSpeed Insights (Desktop) :</p>
+        <ul>
+          <li>Performance : 82/100</li>
+          <li>Accessibilité : 61/100</li>
+          <li>Bonnes pratiques : 78/100</li>
+          <li>SEO : 92/100</li>
+        </ul>
+      </section>
+  
+      <section id="greenit">
+        <h2>Résultat de l'audit GreenIT</h2>
+        <figure>
+          <img src="assets/images/greenIT.webp" alt="Audit greenIT" class="clickable-image" loading="lazy" onclick="openFull(this)" />
+          <figcaption>Audit GreenIT du site Île-de-France Mobilités</figcaption>
+        </figure>
+        <p>Score EcoIndex : 61/100 (Grade C)</p>
+        <p>Métriques techniques :</p>
+        <ul>
+          <li>39 requêtes HTTP</li>
+          <li>Poids total : 917 Ko</li>
+          <li>DOM : 1506 éléments</li>
+        </ul>
+      </section>
+  
+      <section id="wave">
+        <h2>Résultat de l'audit WAVE</h2>
+        <figure>
+          <img src="assets/images/wave.webp" alt="Audit wave" class="clickable-image" loading="lazy" onclick="openFull(this)" />
+          <figcaption>Audit WAVE du site Île-de-France Mobilités</figcaption>
+        </figure>
+        <p>Score d'accessibilité WAVE : Plusieurs problèmes identifiés</p>
+        <p>Métriques techniques :</p>
+        <ul>
+          <li>5 erreurs d'accessibilité détectées</li>
+          <li>21 alertes nécessitant une vérification manuelle</li>
+          <li>2 erreurs de contraste insuffisant</li>
+          <li>23 éléments sans attribut alt approprié</li>
+          <li>Structure de la page : 50 régions ARIA non identifiées correctement</li>
+          <li>Plusieurs formulaires sans étiquettes associées correctement</li>
+        </ul>
+        <p>L'outil WAVE (Web Accessibility Evaluation Tool) permet d'identifier les problèmes d'accessibilité web selon les standards WCAG. Ces problèmes affectent directement les utilisateurs ayant des handicaps visuels, moteurs ou cognitifs.</p>
+      </section>
+
+      
     <section id="audit">
       <h2>Audit de conception responsable</h2>
       
@@ -200,54 +250,7 @@
       <p>Cette répartition souligne que, bien que l'optimisation de l'hébergement et du réseau soit importante, les efforts pour réduire le besoin de renouvellement fréquent des terminaux et minimiser le traitement côté client sont essentiels pour réduire l'impact global.</p>
     </section>
 
-    <section id="lighthouse">
-      <h2>Résultat de l'audit Lighthouse</h2>
-      <figure>
-        <img src="assets/images/lighthouse.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
-        <figcaption>Audit Lighthouse du site Île-de-France Mobilités</figcaption>
-      </figure>
-      <p>Scores PageSpeed Insights (Desktop) :</p>
-      <ul>
-        <li>Performance : 82/100</li>
-        <li>Accessibilité : 61/100</li>
-        <li>Bonnes pratiques : 78/100</li>
-        <li>SEO : 92/100</li>
-      </ul>
-    </section>
-
-    <section id="greenit">
-      <h2>Résultat de l'audit GreenIT</h2>
-      <figure>
-        <img src="assets/images/greenIT.webp" alt="Audit greenIT" class="clickable-image" loading="lazy" onclick="openFull(this)" />
-        <figcaption>Audit GreenIT du site Île-de-France Mobilités</figcaption>
-      </figure>
-      <p>Score EcoIndex : 61/100 (Grade C)</p>
-      <p>Métriques techniques :</p>
-      <ul>
-        <li>39 requêtes HTTP</li>
-        <li>Poids total : 917 Ko</li>
-        <li>DOM : 1506 éléments</li>
-      </ul>
-    </section>
-
-    <section id="wave">
-      <h2>Résultat de l'audit WAVE</h2>
-      <figure>
-        <img src="assets/images/wave.webp" alt="Audit wave" class="clickable-image" loading="lazy" onclick="openFull(this)" />
-        <figcaption>Audit WAVE du site Île-de-France Mobilités</figcaption>
-      </figure>
-      <p>Score d'accessibilité WAVE : Plusieurs problèmes identifiés</p>
-      <p>Métriques techniques :</p>
-      <ul>
-        <li>5 erreurs d'accessibilité détectées</li>
-        <li>21 alertes nécessitant une vérification manuelle</li>
-        <li>2 erreurs de contraste insuffisant</li>
-        <li>23 éléments sans attribut alt approprié</li>
-        <li>Structure de la page : 50 régions ARIA non identifiées correctement</li>
-        <li>Plusieurs formulaires sans étiquettes associées correctement</li>
-      </ul>
-      <p>L'outil WAVE (Web Accessibility Evaluation Tool) permet d'identifier les problèmes d'accessibilité web selon les standards WCAG. Ces problèmes affectent directement les utilisateurs ayant des handicaps visuels, moteurs ou cognitifs.</p>
-    </section>
+    
 
     <section id="informations">
       <h2>Informations complémentaires</h2>
