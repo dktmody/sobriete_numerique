@@ -18,6 +18,7 @@
     <ul>
       <li><a href="#presentation">Présentation du service</a></li>
       <li><a href="#fonctionnalite">Analyse de la fonctionnalité</a></li>
+      <li><a href="#fonctionnalite">Analyse de la fonctionnalité</a></li>
       <li><a href="#audit">Audit de conception responsable</a></li>
       <li><a href="#recommandations">Recommandations</a></li>
 <<<<<<< HEAD
@@ -229,6 +230,7 @@
       <h2>Résultat de l'audit Lighthouse</h2>
       <figure>
         <img src="assets/images/lighthouse.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
+        <img src="assets/images/lighthouse.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
         <figcaption>Audit Lighthouse du site Île-de-France Mobilités</figcaption>
       </figure>
       <p>Scores PageSpeed Insights (Desktop) :</p>
@@ -276,6 +278,21 @@
     <p>Page conçue en respectant les bonnes pratiques de sobriété numérique (accessibilité, performance, qualité).</p>
     <p>Audit réalisé en avril 2025.</p>
   </footer>
+
+  <div id="lightbox" onclick="closeFull()">
+    <img id="lightbox-img" src="" alt="Image agrandie">
+  </div>
+
+  <script>
+    function openFull(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeFull() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 
   <div id="lightbox" onclick="closeFull()">
     <img id="lightbox-img" src="" alt="Image agrandie">
