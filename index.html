@@ -7,20 +7,6 @@
   <title>Audit - Fonctionnalité Trajet | IDFM</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<div id="lightbox" onclick="closeFull()">
-    <img id="lightbox-img" src="" alt="Image agrandie">
-  </div>
-  
-  <script>
-    function openFull(img) {
-      document.getElementById('lightbox-img').src = img.src;
-      document.getElementById('lightbox').style.display = 'flex';
-    }
-  
-    function closeFull() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  </script>
 <body>
   <header>
     <h1>Audit : Fonctionnalité "Trajet" du site Île-de-France Mobilités</h1>
@@ -31,12 +17,19 @@
     <h2>Sommaire</h2>
     <ul>
       <li><a href="#presentation">Présentation du service</a></li>
+      <li><a href="#fonctionnalite">Analyse de la fonctionnalité</a></li>
       <li><a href="#audit">Audit de conception responsable</a></li>
       <li><a href="#recommandations">Recommandations</a></li>
+<<<<<<< HEAD
       <li><a href="#indicateurs">Indicateurs à suivre</a></li>
       <li><a href="#impacts">Répartition des impacts</a></li>
       <li><a href="#lighthouse">Résultat de l'audit Lighthouse</a></li>
       <li><a href="#greenit">Résultat de l'audit GreenIT</a></li>
+=======
+      <li><a href="#lighthouse">Résultat de l’audit Lighthouse</a></li>
+      <li><a href="#greenit">Résultat de l’audit GreenIT</a></li>
+      <li><a href="#wave">Résultat de l’audit WAVE</a></li>
+>>>>>>> 211e4d56143d3944ae77e39c757e20a51509f234
       <li><a href="#informations">Informations complémentaires</a></li>
     </ul>
   </nav>
@@ -54,16 +47,31 @@
       <p>La conception responsable, incluant l'écoconception, l'accessibilité, l'éthique et le respect de la vie privée, considère l'ensemble du cycle de vie d'un service numérique, depuis sa conception jusqu'à sa mise hors service. Elle concerne également les trois niveaux principaux : le matériel (terminaux utilisateurs), les logiciels, et l'infrastructure (réseau et centres de données).</p>
     </section>
 
+    <section id="fonctionnalite">
+      <h2>Analyse de la fonctionnalité "Faire un trajet"</h2>
+      <p>La fonctionnalité "Faire un trajet" du site Île-de-France Mobilités est au cœur de l’expérience utilisateur. Elle permet une recherche rapide d’itinéraire avec plusieurs options (rapide, moins de marche, accessible PMR, etc.).</p>
+      <p>Elle mobilise plusieurs ressources (API, cartes interactives, résultats dynamiques) qui, si elles ne sont pas optimisées, peuvent impacter la performance, l'accessibilité et l’empreinte carbone.</p>
+      <p>Son évaluation à travers des outils comme Lighthouse, Ecoindex, GreenIT et WAVE a permis d’identifier à la fois les forces (navigation claire, lazy loading, responsive design) et les pistes d’amélioration (poids des ressources, structure sémantique, accessibilité renforcée).</p>
+    </section>
+
     <section id="audit">
       <h2>Audit de conception responsable</h2>
+<<<<<<< HEAD
       
       <h3>Performance et Écoconception (Pilier Environnemental)</h3>
+=======
+      <h3>Points forts</h3>
+>>>>>>> 211e4d56143d3944ae77e39c757e20a51509f234
       <ul>
         <li><strong>Score EcoIndex :</strong> 61/100 (Grade C) - indicateur de la performance environnementale de la page web</li>
         <li><strong>Métriques techniques :</strong> 39 requêtes HTTP, poids total de 917 Ko, DOM de 1506 éléments</li>
       </ul>
+<<<<<<< HEAD
 
       <h4>Points forts</h4>
+=======
+      <h3>Points à améliorer</h3>
+>>>>>>> 211e4d56143d3944ae77e39c757e20a51509f234
       <ul>
         <li>Utilisation correcte du protocole HTTP/2, conçu pour améliorer les performances web</li>
         <li>Absence de vidéos superflues et de polices externes</li>
@@ -142,6 +150,7 @@
         <li>Ajouter des alternatives textuelles pour toutes les images significatives</li>
         <li>Fournir des sous-titres ou des transcriptions pour tout contenu vidéo</li>
         <li>Adapter la typographie pour améliorer la lisibilité (sans empattement)</li>
+<<<<<<< HEAD
         <li>Réactiver le zoom utilisateur sur mobile pour une meilleure accessibilité</li>
         <li>Mener des tests avec des utilisateurs ayant divers handicaps pour recueillir des retours directs</li>
       </ul>
@@ -150,6 +159,13 @@
       <ul>
         <li>Mettre en œuvre une politique claire de gestion et de suppression des données personnelles conformément au RGPD</li>
         <li>Documenter la politique de maintenance et de sécurité du service</li>
+=======
+        <li>Réactiver le zoom utilisateur pour une meilleure accessibilité</li>
+        <li>Ajouter des attributs <code>width</code> et <code>height</code> aux images pour éviter les effets de mise en page tardifs</li>
+        <li>Compresser les images avec un outil comme TinyPNG ou Squoosh</li>
+        <li>Utiliser des formats modernes (comme <code>WebP</code>, déjà partiellement appliqué ici 👍)</li>
+        <li>Éviter les images décoratives inutiles ou non explicites pour les lecteurs d’écran</li>
+>>>>>>> 211e4d56143d3944ae77e39c757e20a51509f234
       </ul>
     </section>
 
@@ -212,7 +228,7 @@
     <section id="lighthouse">
       <h2>Résultat de l'audit Lighthouse</h2>
       <figure>
-        <img src="assets/images/lighthouse1.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
+        <img src="assets/images/lighthouse.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
         <figcaption>Audit Lighthouse du site Île-de-France Mobilités</figcaption>
       </figure>
       <p>Scores PageSpeed Insights (Desktop) :</p>
@@ -239,6 +255,14 @@
       </ul>
     </section>
 
+    <section id="wave">
+      <h2>Résultat de l’audit WAVE</h2>
+      <figure>
+        <img src="assets/images/wave.webp" alt="Audit wave" class="clickable-image" loading="lazy" onclick="openFull(this)" />
+        <figcaption>Audit WAVE du site Île-de-France Mobilités</figcaption>
+      </figure>
+    </section>
+
     <section id="informations">
       <h2>Informations complémentaires</h2>
       <p>Le service de recherche d'itinéraire d'Île-de-France Mobilités repose sur une base technique solide et apporte une utilité significative en promouvant les transports en commun durables. Cependant, l'audit met en évidence des opportunités claires d'amélioration de sa conception responsable.</p>
@@ -252,5 +276,20 @@
     <p>Page conçue en respectant les bonnes pratiques de sobriété numérique (accessibilité, performance, qualité).</p>
     <p>Audit réalisé en avril 2025.</p>
   </footer>
+
+  <div id="lightbox" onclick="closeFull()">
+    <img id="lightbox-img" src="" alt="Image agrandie">
+  </div>
+
+  <script>
+    function openFull(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeFull() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
