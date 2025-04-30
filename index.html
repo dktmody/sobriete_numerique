@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Audit de la fonctionnalité trajet du site Île-de-France Mobilités dans une optique de sobriété numérique">
+  <title>Audit - Fonctionnalité Trajet | IDFM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Audit : Fonctionnalité "Trajet" du site Île-de-France Mobilités</h1>
+    <p>Travail de groupe - Conception responsable de service numérique</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Présentation du service</h2>
+      <p>La fonctionnalité <strong>"Trajet"</strong> permet aux usagers de planifier un déplacement en transports en commun en Île-de-France. Elle fournit les itinéraires, horaires et alternatives disponibles en fonction de la localisation, de la date et de l’heure.</p>
+      <p><strong>ODD associé :</strong> Objectif 11 – Villes et communautés durables</p>
+    </section>
+
+    <section>
+      <h2>Audit de conception responsable</h2>
+
+      <h3>Points forts</h3>
+      <ul>
+        <li>Design responsive (mobile first)</li>
+        <li>Utilisation de lazy loading pour certaines images</li>
+        <li>URL lisibles et sans accents</li>
+        <li>Contraste globalement suffisant</li>
+        <li>Navigation cohérente avec utilisation d’ancres</li>
+      </ul>
+
+      <h3>Points à améliorer</h3>
+      <ul>
+        <li>Présence de styles en ligne dans certains éléments : préférer les fichiers CSS externes minifiés</li>
+        <li>Police non spécifiquement adaptée à la lecture écran (police à empattement par endroits)</li>
+        <li>Images redimensionnées à la volée plutôt que pré-traitées</li>
+        <li>Structure HTML : sauts de titres non cohérents (ex. : <code>&lt;h1&gt;</code> suivi directement de <code>&lt;h3&gt;</code>)</li>
+        <li>Zoom parfois désactivé sur mobile</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Recommandations</h2>
+      <ul>
+        <li>Revoir la hiérarchie des titres pour respecter la logique <code>&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;</code></li>
+        <li>Optimiser toutes les images (taille fixe) et activer systématiquement le lazy loading</li>
+        <li>Supprimer les styles en ligne et consolider le CSS dans un fichier unique minifié</li>
+        <li>Adapter la typographie pour améliorer la lisibilité (sans empattement)</li>
+        <li>Réactiver le zoom utilisateur pour une meilleure accessibilité</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Informations complémentaires</h2>
+      <ul>
+        <li>Score Lighthouse : accessibilité 86, performance 74, bonnes pratiques 92</li>
+        <li>Score Ecolindex : C (à confirmer après analyse complète)</li>
+        <li>Outils utilisés : Lighthouse, Ecoindex, Web.dev measure</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Page conçue en respectant les bonnes pratiques de sobriété numérique (accessibilité, performance, qualité).</p>
+  </footer>
+</body>
+</html>

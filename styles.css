@@ -1,0 +1,89 @@
+/* styles.css — Respecte les bonnes pratiques : 
+   - Externalisation des styles
+   - Pas de polices à empattement
+   - Taille de police adaptée
+   - Maximum 3 couleurs de la même gamme
+   - Contraste élevé
+   - Responsive design de base
+*/
+
+:root {
+    --color-bg: #ffffff;
+    --color-primary: #004080;
+    --color-secondary: #007acc;
+    --color-accent: #e0f0ff;
+    --text-color: #000000;
+    --font-base: 'Arial', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--color-bg);
+    color: var(--text-color);
+    font-family: var(--font-base);
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+  }
+  
+  section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--color-accent);
+    border-radius: 8px;
+  }
+  
+  ul {
+    margin-left: 1.5rem;
+  }
+  
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
