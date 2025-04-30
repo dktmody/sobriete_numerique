@@ -7,20 +7,46 @@
   <title>Audit - Fonctionnalité Trajet | IDFM</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+<div id="lightbox" onclick="closeFull()">
+    <img id="lightbox-img" src="" alt="Image agrandie">
+  </div>
+  
+  <script>
+    function openFull(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+  
+    function closeFull() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 <body>
   <header>
     <h1>Audit : Fonctionnalité "Trajet" du site Île-de-France Mobilités</h1>
     <p>Travail de groupe - Conception responsable de service numérique</p>
   </header>
 
+  <nav>
+    <h2>Sommaire</h2>
+    <ul>
+      <li><a href="#presentation">Présentation du service</a></li>
+      <li><a href="#audit">Audit de conception responsable</a></li>
+      <li><a href="#recommandations">Recommandations</a></li>
+      <li><a href="#lighthouse">Résultat de l’audit Lighthouse</a></li>
+      <li><a href="#greenit">Résultat de l’audit GreenIT</a></li>
+      <li><a href="#informations">Informations complémentaires</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section>
+    <section id="presentation">
       <h2>Présentation du service</h2>
       <p>La fonctionnalité <strong>"Trajet"</strong> permet aux usagers de planifier un déplacement en transports en commun en Île-de-France. Elle fournit les itinéraires, horaires et alternatives disponibles en fonction de la localisation, de la date et de l’heure.</p>
       <p><strong>ODD associé :</strong> Objectif 11 – Villes et communautés durables</p>
     </section>
 
-    <section>
+    <section id="audit">
       <h2>Audit de conception responsable</h2>
 
       <h3>Points forts</h3>
@@ -42,7 +68,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="recommandations">
       <h2>Recommandations</h2>
       <ul>
         <li>Revoir la hiérarchie des titres pour respecter la logique <code>&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;</code></li>
@@ -53,11 +79,27 @@
       </ul>
     </section>
 
-    <section>
+    <section id="lighthouse">
+      <h2>Résultat de l’audit Lighthouse</h2>
+      <figure>
+        <img src="assets/images/lighthouse1.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
+        <figcaption>Audit Lighthouse du site Île-de-France Mobilités</figcaption>
+      </figure>
+    </section>
+
+    <section id="greenit">
+      <h2>Résultat de l’audit GreenIT</h2>
+      <figure>
+        <img src="assets/images/greenIT.webp" alt="Audit greenIT" class="clickable-image" loading="lazy" onclick="openFull(this)" />
+        <figcaption>Audit GreenIT du site Île-de-France Mobilités</figcaption>
+      </figure>
+    </section>
+
+    <section id="informations">
       <h2>Informations complémentaires</h2>
       <ul>
         <li>Score Lighthouse : accessibilité 86, performance 74, bonnes pratiques 92</li>
-        <li>Score Ecolindex : C (à confirmer après analyse complète)</li>
+        <li>Score Ecolindex : C </li>
         <li>Outils utilisés : Lighthouse, Ecoindex, Web.dev measure</li>
       </ul>
     </section>
