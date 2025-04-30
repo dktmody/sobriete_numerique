@@ -33,80 +33,224 @@
       <li><a href="#presentation">Présentation du service</a></li>
       <li><a href="#audit">Audit de conception responsable</a></li>
       <li><a href="#recommandations">Recommandations</a></li>
-      <li><a href="#lighthouse">Résultat de l’audit Lighthouse</a></li>
-      <li><a href="#greenit">Résultat de l’audit GreenIT</a></li>
+      <li><a href="#indicateurs">Indicateurs à suivre</a></li>
+      <li><a href="#impacts">Répartition des impacts</a></li>
+      <li><a href="#lighthouse">Résultat de l'audit Lighthouse</a></li>
+      <li><a href="#greenit">Résultat de l'audit GreenIT</a></li>
       <li><a href="#informations">Informations complémentaires</a></li>
     </ul>
   </nav>
 
   <main>
     <section id="presentation">
-      <h2>Présentation du service</h2>
-      <p>La fonctionnalité <strong>"Trajet"</strong> permet aux usagers de planifier un déplacement en transports en commun en Île-de-France. Elle fournit les itinéraires, horaires et alternatives disponibles en fonction de la localisation, de la date et de l’heure.</p>
-      <p><strong>ODD associé :</strong> Objectif 11 – Villes et communautés durables</p>
+      <h2>Présentation du service et son utilité</h2>
+      <p>La fonctionnalité <strong>"Trajet"</strong> du site Île-de-France Mobilités permet aux usagers de planifier un déplacement en transports en commun en Île-de-France. Elle fournit les itinéraires, horaires et alternatives disponibles en fonction de la localisation, de la date et de l'heure.</p>
+      <p>En offrant un outil accessible de planification des transports en commun, ce service contribue directement à réduire la dépendance à la voiture individuelle, favorisant ainsi une mobilité durable.</p>
+      <p><strong>ODD associés :</strong></p>
+      <ul>
+        <li>Objectif 11 – Villes et communautés durables (en facilitant une mobilité urbaine efficace)</li>
+        <li>Objectif 13 – Mesures relatives à la lutte contre les changements climatiques (en encourageant l'utilisation de modes de transport à faible émission de carbone)</li>
+      </ul>
+      <p>La conception responsable, incluant l'écoconception, l'accessibilité, l'éthique et le respect de la vie privée, considère l'ensemble du cycle de vie d'un service numérique, depuis sa conception jusqu'à sa mise hors service. Elle concerne également les trois niveaux principaux : le matériel (terminaux utilisateurs), les logiciels, et l'infrastructure (réseau et centres de données).</p>
     </section>
 
     <section id="audit">
       <h2>Audit de conception responsable</h2>
-
-      <h3>Points forts</h3>
+      
+      <h3>Performance et Écoconception (Pilier Environnemental)</h3>
       <ul>
-        <li>Design responsive (mobile first)</li>
-        <li>Utilisation de lazy loading pour certaines images</li>
-        <li>URL lisibles et sans accents</li>
-        <li>Contraste globalement suffisant</li>
-        <li>Navigation cohérente avec utilisation d’ancres</li>
+        <li><strong>Score EcoIndex :</strong> 61/100 (Grade C) - indicateur de la performance environnementale de la page web</li>
+        <li><strong>Métriques techniques :</strong> 39 requêtes HTTP, poids total de 917 Ko, DOM de 1506 éléments</li>
       </ul>
 
-      <h3>Points à améliorer</h3>
+      <h4>Points forts</h4>
       <ul>
-        <li>Présence de styles en ligne dans certains éléments : préférer les fichiers CSS externes minifiés</li>
-        <li>Police non spécifiquement adaptée à la lecture écran (police à empattement par endroits)</li>
+        <li>Utilisation correcte du protocole HTTP/2, conçu pour améliorer les performances web</li>
+        <li>Absence de vidéos superflues et de polices externes</li>
+        <li>Design responsive (mobile first)</li>
+        <li>Core Web Vitals généralement bons :
+          <ul>
+            <li>Largest Contentful Paint (LCP) : 1,4s (desktop), 1,7s (mobile)</li>
+            <li>Interaction to Next Paint (INP) : 80ms (desktop), 84ms (mobile)</li>
+            <li>Cumulative Layout Shift (CLS) : 0,01</li>
+            <li>First Contentful Paint (FCP) : 1,1s (desktop), 1,4s (mobile)</li>
+            <li>Time to First Byte (TTFB) : 0,4s (desktop), 0,5s (mobile)</li>
+          </ul>
+        </li>
+        <li>URL lisibles et sans accents</li>
+        <li>Navigation cohérente avec utilisation d'ancres</li>
+      </ul>
+
+      <h4>Points à améliorer</h4>
+      <ul>
+        <li>Certaines ressources non compressées, augmentant le volume de transfert</li>
+        <li>Trop de requêtes lors de la navigation (39 requêtes HTTP)</li>
+        <li>13 images sur 31 non optimisées</li>
+        <li>3 scripts inutiles identifiés</li>
+        <li>Présence de styles en ligne dans certains éléments</li>
+        <li>Police non spécifiquement adaptée à la lecture écran</li>
         <li>Images redimensionnées à la volée plutôt que pré-traitées</li>
-        <li>Structure HTML : sauts de titres non cohérents (ex. : <code>&lt;h1&gt;</code> suivi directement de <code>&lt;h3&gt;</code>)</li>
+        <li>Structure HTML : sauts de titres non cohérents</li>
         <li>Zoom parfois désactivé sur mobile</li>
+      </ul>
+
+      <h3>Accessibilité (Pilier Social)</h3>
+      <ul>
+        <li><strong>Score d'accessibilité Lighthouse :</strong> 61/100 (significativement inférieur à l'objectif recommandé de 90/100)</li>
+      </ul>
+
+      <h4>Points forts</h4>
+      <ul>
+        <li>Structure générale du site claire</li>
+        <li>Navigation au clavier possible sur les éléments principaux</li>
+        <li>Contraste globalement suffisant</li>
+      </ul>
+
+      <h4>Points à améliorer</h4>
+      <ul>
+        <li>Éléments dynamiques (calendrier, filtres, carte interactive) peu accessibles aux lecteurs d'écran</li>
+        <li>Manque d'alternatives textuelles pour certains visuels</li>
+        <li>Contenu vidéo sans sous-titres</li>
+        <li>Structure HTML : hiérarchie des titres non cohérente</li>
+      </ul>
+
+      <h3>Qualité Web et Expérience Utilisateur (Piliers Économique & Social)</h3>
+      <ul>
+        <li>Parcours utilisateur pour la recherche d'itinéraire simple et rapide</li>
+        <li>Informations fournies (itinéraires, horaires) à jour et riches</li>
+        <li>Temps de chargement généralement bons, mais la page d'accueil souffre de trop nombreuses requêtes HTTP et d'images non optimisées</li>
       </ul>
     </section>
 
     <section id="recommandations">
       <h2>Recommandations</h2>
+      
+      <h3>Recommandations d'écoconception</h3>
+      <ul>
+        <li>Optimiser les images : implémenter des techniques de compression et utiliser des formats d'image modernes comme WebP</li>
+        <li>Réduire le nombre de requêtes : consolider les scripts et feuilles de style, supprimer les 3 scripts inutiles identifiés</li>
+        <li>Améliorer la compression des ressources : activer la compression GZIP ou Brotli pour toutes les ressources statiques</li>
+        <li>Limiter la taille du DOM : simplifier la structure HTML pour améliorer les performances de rendu</li>
+        <li>Supprimer les styles en ligne et consolider le CSS dans un fichier unique minifié</li>
+        <li>Suivre et afficher publiquement les scores EcoIndex et PageSpeed sur le site</li>
+      </ul>
+
+      <h3>Recommandations d'accessibilité</h3>
       <ul>
         <li>Revoir la hiérarchie des titres pour respecter la logique <code>&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;</code></li>
-        <li>Optimiser toutes les images (taille fixe) et activer systématiquement le lazy loading</li>
-        <li>Supprimer les styles en ligne et consolider le CSS dans un fichier unique minifié</li>
+        <li>S'assurer que tous les éléments interactifs sont pleinement accessibles, notamment les composants dynamiques complexes</li>
+        <li>Ajouter des alternatives textuelles pour toutes les images significatives</li>
+        <li>Fournir des sous-titres ou des transcriptions pour tout contenu vidéo</li>
         <li>Adapter la typographie pour améliorer la lisibilité (sans empattement)</li>
-        <li>Réactiver le zoom utilisateur pour une meilleure accessibilité</li>
+        <li>Réactiver le zoom utilisateur sur mobile pour une meilleure accessibilité</li>
+        <li>Mener des tests avec des utilisateurs ayant divers handicaps pour recueillir des retours directs</li>
+      </ul>
+
+      <h3>Recommandations de gestion du cycle de vie et des données</h3>
+      <ul>
+        <li>Mettre en œuvre une politique claire de gestion et de suppression des données personnelles conformément au RGPD</li>
+        <li>Documenter la politique de maintenance et de sécurité du service</li>
       </ul>
     </section>
 
+    <section id="indicateurs">
+      <h2>Indicateurs à suivre</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Indicateur</th>
+            <th>Valeur actuelle</th>
+            <th>Objectif recommandé</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Score EcoIndex</td>
+            <td>61/100 (C)</td>
+            <td>&gt;70 (B ou A)</td>
+          </tr>
+          <tr>
+            <td>Score d'accessibilité</td>
+            <td>61/100</td>
+            <td>&gt;90/100</td>
+          </tr>
+          <tr>
+            <td>Score de performance</td>
+            <td>82/100</td>
+            <td>&gt;90/100</td>
+          </tr>
+          <tr>
+            <td>Nombre de requêtes HTTP</td>
+            <td>39</td>
+            <td>&lt;25</td>
+          </tr>
+          <tr>
+            <td>Taille de la page d'accueil</td>
+            <td>917 Ko</td>
+            <td>&lt;800 Ko</td>
+          </tr>
+          <tr>
+            <td>Taille du DOM</td>
+            <td>1506</td>
+            <td>&lt;1400</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="impacts">
+      <h2>Répartition des impacts</h2>
+      <p>L'audit suggère que, en ordre de grandeur général, les impacts environnementaux du service numérique sont répartis comme suit :</p>
+      <ul>
+        <li><strong>70%</strong> sont liés aux terminaux utilisateurs. Cela concorde avec les conclusions indiquant que la phase de fabrication des équipements numériques représente une part significative des impacts environnementaux globaux.</li>
+        <li><strong>20%</strong> sont liés à l'hébergement (centres de données).</li>
+        <li><strong>10%</strong> sont liés à l'infrastructure réseau.</li>
+      </ul>
+      <p>Cette répartition souligne que, bien que l'optimisation de l'hébergement et du réseau soit importante, les efforts pour réduire le besoin de renouvellement fréquent des terminaux et minimiser le traitement côté client sont essentiels pour réduire l'impact global.</p>
+    </section>
+
     <section id="lighthouse">
-      <h2>Résultat de l’audit Lighthouse</h2>
+      <h2>Résultat de l'audit Lighthouse</h2>
       <figure>
         <img src="assets/images/lighthouse1.webp" alt="Audit Lighthouse..." class="clickable-image" loading="lazy" onclick="openFull(this)" />
         <figcaption>Audit Lighthouse du site Île-de-France Mobilités</figcaption>
       </figure>
+      <p>Scores PageSpeed Insights (Desktop) :</p>
+      <ul>
+        <li>Performance : 82/100</li>
+        <li>Accessibilité : 61/100</li>
+        <li>Bonnes pratiques : 78/100</li>
+        <li>SEO : 92/100</li>
+      </ul>
     </section>
 
     <section id="greenit">
-      <h2>Résultat de l’audit GreenIT</h2>
+      <h2>Résultat de l'audit GreenIT</h2>
       <figure>
         <img src="assets/images/greenIT.webp" alt="Audit greenIT" class="clickable-image" loading="lazy" onclick="openFull(this)" />
         <figcaption>Audit GreenIT du site Île-de-France Mobilités</figcaption>
       </figure>
+      <p>Score EcoIndex : 61/100 (Grade C)</p>
+      <p>Métriques techniques :</p>
+      <ul>
+        <li>39 requêtes HTTP</li>
+        <li>Poids total : 917 Ko</li>
+        <li>DOM : 1506 éléments</li>
+      </ul>
     </section>
 
     <section id="informations">
       <h2>Informations complémentaires</h2>
-      <ul>
-        <li>Score Lighthouse : accessibilité 86, performance 74, bonnes pratiques 92</li>
-        <li>Score Ecolindex : C </li>
-        <li>Outils utilisés : Lighthouse, Ecoindex, Web.dev measure</li>
-      </ul>
+      <p>Le service de recherche d'itinéraire d'Île-de-France Mobilités repose sur une base technique solide et apporte une utilité significative en promouvant les transports en commun durables. Cependant, l'audit met en évidence des opportunités claires d'amélioration de sa conception responsable.</p>
+      <p>Les principaux axes d'amélioration concernent l'écoconception (optimisation des images, réduction du nombre de requêtes HTTP, gestion de la complexité du DOM) et l'accessibilité (notamment pour les éléments dynamiques et l'ajout d'alternatives textuelles et de sous-titres). De plus, la mise en œuvre de politiques transparentes de gestion des données personnelles est essentielle pour répondre aux aspects sociaux et éthiques de la conception responsable.</p>
+      <p>La mise en œuvre des actions recommandées permettrait non seulement de réduire l'empreinte environnementale du service et d'améliorer son inclusivité, mais aussi d'améliorer la qualité web globale et l'expérience utilisateur. La responsabilité de l'impact numérique repose en définitive sur ceux qui conçoivent et utilisent les services numériques.</p>
+      <p>Outils utilisés : Lighthouse, Ecoindex, Web.dev measure, PageSpeed Insights</p>
     </section>
   </main>
 
   <footer>
     <p>Page conçue en respectant les bonnes pratiques de sobriété numérique (accessibilité, performance, qualité).</p>
+    <p>Audit réalisé en avril 2025.</p>
   </footer>
 </body>
 </html>
